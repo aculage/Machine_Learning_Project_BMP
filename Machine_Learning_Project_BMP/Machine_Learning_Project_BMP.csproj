@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{182D0781-DEAF-453B-8B73-C225AD989200}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Machine_Learning_Project_BMP</RootNamespace>
+    <AssemblyName>Machine_Learning_Project_BMP</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="resfolder\0_1.bmp" />
+    <Content Include="resfolder\0_standart.bmp" />
+    <Content Include="resfolder\1_1.bmp" />
+    <Content Include="resfolder\1_2.bmp" />
+    <Content Include="resfolder\1_3.bmp" />
+    <Content Include="resfolder\1_standart.bmp" />
+    <Content Include="resfolder\2_1.bmp" />
+    <Content Include="resfolder\2_2.bmp" />
+    <Content Include="resfolder\2_3.bmp" />
+    <Content Include="resfolder\2_4.bmp" />
+    <Content Include="resfolder\2_5.bmp" />
+    <Content Include="resfolder\2_standart.bmp" />
+    <Content Include="resfolder\3_1.bmp" />
+    <Content Include="resfolder\3_2.bmp" />
+    <Content Include="resfolder\3_3.bmp" />
+    <Content Include="resfolder\3_4.bmp" />
+    <Content Include="resfolder\3_standart.bmp" />
+    <Content Include="resfolder\4_1.bmp" />
+    <Content Include="resfolder\4_2.bmp" />
+    <Content Include="resfolder\4_3.bmp" />
+    <Content Include="resfolder\4_4.bmp" />
+    <Content Include="resfolder\4_standart.bmp" />
+    <Content Include="resfolder\5_1.bmp" />
+    <Content Include="resfolder\5_2.bmp" />
+    <Content Include="resfolder\5_3.bmp" />
+    <Content Include="resfolder\5_4.bmp" />
+    <Content Include="resfolder\5_5.bmp" />
+    <Content Include="resfolder\5_6.bmp" />
+    <Content Include="resfolder\5_standart.bmp" />
+    <Content Include="resfolder\6_1.bmp" />
+    <Content Include="resfolder\6_2.bmp" />
+    <Content Include="resfolder\6_3.bmp" />
+    <Content Include="resfolder\6_4.bmp" />
+    <Content Include="resfolder\6_standart.bmp" />
+    <Content Include="resfolder\7_1.bmp" />
+    <Content Include="resfolder\7_2.bmp" />
+    <Content Include="resfolder\7_3.bmp" />
+    <Content Include="resfolder\7_standart.bmp" />
+    <Content Include="resfolder\8_1.bmp" />
+    <Content Include="resfolder\8_2.bmp" />
+    <Content Include="resfolder\8_3.bmp" />
+    <Content Include="resfolder\8_4.bmp" />
+    <Content Include="resfolder\8_standart.bmp" />
+    <Content Include="resfolder\9_1.bmp" />
+    <Content Include="resfolder\9_2.bmp" />
+    <Content Include="resfolder\9_3.bmp" />
+    <Content Include="resfolder\9_standart.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
