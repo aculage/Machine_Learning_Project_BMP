@@ -33,14 +33,30 @@ namespace Machine_Learning_Project_BMP
 
             resfolder = new DirectoryInfo(pathselector.SelectedPath);
             FileInfo[] fileInfo = resfolder.GetFiles("*.bmp");
-
+            StreamReader reader = new StreamReader(pathselector.SelectedPath + "/weights.txt",System.Text.Encoding.Default);
+            
+            //Text = ;
             //Подгрузка весов перцептронов
-            /*for (int i = 0; i < 8; i++)
+            for (int i = 0; i < 10; i++)
             {
-                for (int j = 0; j < 5; j++)
-                    input[j,i]
+                int[,] tmp_image = new int[5, 8];
+                int num = reader.Read();
+
+                for (int j = 0; j < 8; j++)
+                {
+                    for (int k = 0; k < 5; k++)
+                        tmp_image[k,j] = ;
+                }
+                images[i] = new number_image(5, 8, tmp_image);
+                //
+            }
+
+            /*for (int j = 0; j < 8; j++)
+            {
+                for (int k = 0; k < 5; k++)
+                    textBox1.Text += images[0].image[k,j]; 
             }*/
-            //
+
             foreach (var file in fileInfo)
             {
                 listBox1.Items.Add(file);
@@ -52,14 +68,18 @@ namespace Machine_Learning_Project_BMP
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            //Распознавание элементов картинки, здесь нужно создать образ картинки
-
-            //
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Bitmap current_image = (Bitmap)pictureBox1.Image;
+            int[,] _current_image = new int[5, 8];
+            for (int i=0; i<current_image.Width;i++)
+                for(int j=0;j<current_image.Height;j++)
+                {
 
+                }
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -74,7 +94,7 @@ namespace Machine_Learning_Project_BMP
         public int[,] input;
         public int floor = 10;
 
-        public int count_weight(int[,] cur_inp)
+        public int count_weight(int[,] cur_inp) //Подсчет веса образа картинки на вход
         {
             int sum = 0;
             for (int i = 0; i < 5; i++)
@@ -84,7 +104,7 @@ namespace Machine_Learning_Project_BMP
             }
             return sum;
         }
-        public number_image(int width, int height, int[,] image_in)
+        public number_image(int width, int height, int[,] image_in)//создание класса перцептрона
         {
             image = new int[width, height];
             image = image_in;
