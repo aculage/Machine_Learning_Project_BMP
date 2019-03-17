@@ -33,19 +33,21 @@ namespace Machine_Learning_Project_BMP
 
             resfolder = new DirectoryInfo(pathselector.SelectedPath);
             FileInfo[] fileInfo = resfolder.GetFiles("*.bmp");
-            StreamReader reader = new StreamReader(pathselector.SelectedPath + "/weights.txt",System.Text.Encoding.Default);
+            StreamReader reader = new StreamReader(pathselector.SelectedPath + "/weights.txt");
             
             //Text = ;
             //Подгрузка весов перцептронов
             for (int i = 0; i < 10; i++)
             {
                 int[,] tmp_image = new int[5, 8];
-                int num = reader.Read();
 
+                string num = reader.ReadLine();
                 for (int j = 0; j < 8; j++)
                 {
+                   
+                    string[] arr = reader.ReadLine().Split(' ');
                     for (int k = 0; k < 5; k++)
-                        tmp_image[k,j] = ;
+                        tmp_image[k,j] = int.Parse(arr[k]);
                 }
                 images[i] = new number_image(5, 8, tmp_image);
                 //
