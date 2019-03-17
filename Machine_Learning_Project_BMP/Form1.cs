@@ -75,19 +75,36 @@ namespace Machine_Learning_Project_BMP
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Bitmap current_image = (Bitmap)pictureBox1.Image;
-            int[,] _current_image = new int[5, 8];
-            for (int i=0; i<current_image.Width;i++)
-                for(int j=0;j<current_image.Height;j++)
+            FileInfo straw = (FileInfo)listBox1.SelectedItem;
+            if (straw == null) { MessageBox.Show("Выбери картинку дебил"); }
+            else
+            {
+                Bitmap current_image = (Bitmap)Image.FromFile(straw.FullName);
+                int[,] _current_image = new int[5, 8];
+                int maximum = -500;
+                for (int z = 0; z < 10; z++)
                 {
-
+                    for (int i = 0; i < current_image.Height; i++)
+                        for (int j = 0; j < current_image.Width; j++)
+                        {
+                            Color color = current_image.GetPixel(j, i);
+                            if((color.R<225)&&(color.G<225)&&(color.B<225))
+                                _current_image[j, i] = 1;
+                        }
                 }
+
+            }
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             FileInfo straw = (FileInfo)listBox1.SelectedItem;
             pictureBox1.Image = (Bitmap)Image.FromFile(straw.FullName);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
     public class number_image
